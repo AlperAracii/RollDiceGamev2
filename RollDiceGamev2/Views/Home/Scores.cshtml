@@ -1,0 +1,56 @@
+﻿@model List<RollDiceGamev2.Models.Scores>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/extra.css" rel="stylesheet" />
+    <title>Pig Game</title>
+</head>
+<body>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 1px;
+        }
+    </style>
+    <div class="container" style="width:270%">
+        <div class="row" style="text-align:center">
+            <h4 class="col-lg-12 col-md-12 col-xs-12" style="font-size:40px"><strong>Scores</strong></h4>
+        </div>
+
+        <div class="row">
+            @foreach (var item in Model)
+            {<div class="col-md-3 col-sm-12">
+                    <table style="width:100%;">
+                        <tr style="text-align:center; border:1px solid black;">
+                            <td colspan="2">Versus @item.VersusId</td>
+                        </tr>
+                        <tr>
+                            <th>@item.Player1.ToUpper()</th>
+                            <th>@item.Player2.ToUpper()</th>
+                        </tr>
+                        <tr>
+                            <td>@item.Score1</td>
+                            <td>@item.Score2</td>
+                        </tr>
+                    </table>
+                    <br />
+                </div>
+            }
+        </div>
+    </div>
+
+    <button class="btn-new" id="btnNew"><i class="ion-ios-plus-outline"></i>New game</button>
+
+</body>
+</html>
+@section scripts{
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="~/js/app.js"></script>
+}

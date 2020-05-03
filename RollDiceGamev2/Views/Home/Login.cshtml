@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/extra.css" rel="stylesheet" />
+    <title>Pig Game</title>
+</head>
+<body>
+    <form id="form1" method="post" action="/Home/StartGame">
+        <div class="wrapper clearfix" id="layout">
+
+            <div class="player-0-panel-login active">
+                <label id="lblPlayer1" class="player-lbl">Player1 Username</label>
+                <input type="text" autocomplete="off" name="player1Text" id="txtPlayer1" class="player-name-txt" />
+            </div>
+
+            <div class="player-1-panel-login">
+                <label id="lblPlayer2" class="player-lbl">Player2 Username</label>
+                <input type="text" autocomplete="off" name="player2Text" id="player2Text" class="player-name-txt" />
+            </div>
+
+            <input type="submit" id="btnStart" class="button-strt" value=" Start Game">
+
+        </div>
+    </form>
+    <form id="form1" method="post" action="/Home/Scores">
+        <button type="submit" class="btn-hold" id="btnScore">See Scores</button>
+    </form>
+</body>
+</html>
+
+
