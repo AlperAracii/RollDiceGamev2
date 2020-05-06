@@ -46,6 +46,7 @@ namespace RollDiceGamev2.Controllers
            
             var value = "";
             var score1 = "";
+
             try
             {
                 cmd.Connection = conn;
@@ -174,6 +175,12 @@ namespace RollDiceGamev2.Controllers
             conn.Close();
             return View(scores);
         }
-    }
 
+        public ActionResult newGame()
+        {
+            Session.Clear();
+
+            return RedirectToAction("Login");
+        }
+    }
 }

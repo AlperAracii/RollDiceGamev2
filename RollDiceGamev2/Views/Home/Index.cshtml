@@ -36,7 +36,10 @@
                 <div class="player-current-score" id="current-1">0</div>
             </div>
         </div>
-        <button class="btn-new" id="btnNew"><i class="ion-ios-plus-outline"></i>New game</button>
+        <form id="form2" method="post" action="/Home/newGame">
+            <button type="submit" class="btn-new" id="btnNew"><i class="ion-ios-plus-outline"></i>New game</button>
+        </form>
+
         <button class="btn-roll" id="btnRoll" onclick="writeScore"><i class="ion-ios-loop"></i>Roll</button>
         <button class="btn-hold" id="btnHold"><i class="ion-ios-download-outline"></i>Hold</button>
         <button class="btn-roll" id="btnOver" style="display: none">Game Over</button>
