@@ -31,7 +31,7 @@ function rollDiceFunc() {
         document.getElementById('current-' + activePlayer).textContent = roundScore;
         sum = scores[activePlayer] + roundScore;
 
-        if(sum >= 10){
+        if(sum >= 100){
             document.getElementById('score-' + activePlayer).textContent = sum;
             document.getElementById('btnOver').style.display = "block";
             document.getElementById('btnScore').style.display = "block";

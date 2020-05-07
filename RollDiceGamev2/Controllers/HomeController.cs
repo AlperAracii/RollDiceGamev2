@@ -126,7 +126,7 @@ namespace RollDiceGamev2.Controllers
             cmd = new OleDbCommand();
             conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\RollDiceGameDb.mdb;Persist Security Info=True");
 
-            if (Int32.Parse(score0) >= 10 || Int32.Parse(score1) >= 10)
+            if (Int32.Parse(score0) >= 100 || Int32.Parse(score1) >= 100)
             {
                 try
                 {
